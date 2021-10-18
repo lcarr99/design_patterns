@@ -1,14 +1,14 @@
 <?php
 
-use Exception;
 use PHPUnit\Framework\TestCase;
-use Lcarr\DesignPatterns\StructuralPatterns\Facade\ShapeMaker;
+use Lcarr\DesignPatterns\StructuralPatterns\Facade\IceCreamMaker;
 
 class FacadeTest extends TestCase
 {
-    public function testDrawCircleDrawsCircle(): void
+    public function testCorrectIceCreamsAreMade(): void
     {
-        $shapeMaker = new ShapeMaker();
-        $this->assertEquals(null, $shapeMaker->drawCircle());
+        $iceCreamMaker = new IceCreamMaker();
+        $this->assertEquals(null, $iceCreamMaker->makeChocolate());
+        $this->assertEquals(null, $iceCreamMaker->makeVanilla());
     }
 }

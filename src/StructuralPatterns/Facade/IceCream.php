@@ -2,7 +2,7 @@
 
 namespace Lcarr\DesignPatterns\StructuralPatterns\Facade;
 
-interface Shape
+interface IceCream
 {
-    public function draw(): void;
+    public function make(): void;
 }
