@@ -1,5 +1,9 @@
 <?php
 
+namespace Lcarr\DesignPatterns\BehaviouralPatterns\Iterator;
+
+use Iterator;
+
 class Playlist implements Iterator
 {
     private int $key;
