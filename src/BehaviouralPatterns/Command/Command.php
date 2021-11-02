@@ -6,12 +6,12 @@ namespace Lcarr\DesignPatterns\BehaviouralPatterns\Command;
 
 abstract class Command
 {
-    protected Application $app;
-    protected Editor $editor;
+    protected Television $television;
 
-    public function __construct(Application $app, Editor $editor)
+    public function __construct(Television $television)
     {
-        $this->app = $app;
-        $this->editor = $editor;
+        $this->television = $television;
     }
+
+    abstract public function execute(): void;
 }
