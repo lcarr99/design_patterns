@@ -22,6 +22,6 @@ class Covid implements Virus
 
     public function copy(): \Lcarr\Designpatterns\CreationalPatterns\Prototype\Covid
     {
-        return $this;
+        return new Covid();
     }
 }
