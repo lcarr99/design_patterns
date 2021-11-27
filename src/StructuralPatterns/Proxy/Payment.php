@@ -1,10 +1,15 @@
 <?php
 
-declare(strict_types=1);
 
 namespace Lcarr\DesignPatterns\StructuralPatterns\Proxy;
 
-interface Payment
+
+class Payment implements iPayment
 {
-    public function pay(int $amount): bool;
+
+    public function pay(int $amount): bool
+    {
+        echo 'Payment Made';
+        return true;
+    }
 }
