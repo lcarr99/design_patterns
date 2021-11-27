@@ -6,17 +6,19 @@ use Lcarr\Designpatterns\CreationalPatterns\AbstractFactory\Employee;
 
 class ProjectManager implements Employee
 {
-    public function isManager(): bool
+    private const wage = 60000;
+
+    public static function isManager(): bool
     {
         return true;
     }
 
-    public function getWage(): float
+    public static function getWage(): float
     {
-        return 60000.00;
+        return self::wage;
     }
 
-    public function role(): string
+    public static function role(): string
     {
         return __CLASS__;
     }
