@@ -6,7 +6,7 @@ use Lcarr\Designpatterns\StructuralPatterns\Adapter;
 
 class PositiveMagnet
 {
-    public function connects(NegativeMagnet $magnet): bool
+    public static function connects(NegativeMagnet $magnet): bool
     {
         return true;
     }

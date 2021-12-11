@@ -12,7 +12,7 @@ class DivideNumbers implements Chain
 
     public function Calculate(Numbers $request): int
     {
-        if ($request->calcRequested() === 'Multiply') {
+        if ($request->calcRequested() === 'Divide') {
             return $request->getNumberOne() / $request->getNumberTwo();
         } else {
             return $this->nextHandler->calculate($request);

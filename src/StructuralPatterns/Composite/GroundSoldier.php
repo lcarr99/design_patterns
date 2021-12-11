@@ -2,9 +2,15 @@
 
 namespace Lcarr\DesignPatterns\StructuralPatterns\Composite;
 
-use Lcarr\DesignPatterns\StructuralPatterns\Composite\Commando;
-
-class GroundSoldier extends Commando
+class GroundSoldier implements Soldier
 {
+    public static function getRole(): string
+    {
+        return 'Ground Soldier';
+    }
 
+    public function march(): void
+    {
+        echo 'Yes Sir';
+    }
 }

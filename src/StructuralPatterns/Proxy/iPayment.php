@@ -6,5 +6,5 @@ namespace Lcarr\DesignPatterns\StructuralPatterns\Proxy;
 
 interface iPayment
 {
-    public function pay(int $amount): bool;
+    public function pay(int $amount): void;
 }

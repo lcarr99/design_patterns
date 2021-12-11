@@ -7,22 +7,13 @@ use Lcarr\DesignPatterns\StructuralPatterns\Facade\Vanilla;
 
 class IceCreamMaker
 {
-    private Chocolate $chocolate;
-    private Vanilla $vanilla;
-
-    public function __construct()
+    public function makeChocolate(): IceCream
     {
-        $this->chocolate = new Chocolate();
-        $this->vanilla = new Vanilla();
+        return new Chocolate();
     }
 
-    public function makeChocolate(): void
+    public function makeVanilla(): IceCream
     {
-        $this->chocolate->make();
-    }
-
-    public function makeVanilla(): void
-    {
-        $this->vanilla->make();
+        return new Vanilla();
     }
 }

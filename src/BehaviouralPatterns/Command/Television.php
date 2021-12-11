@@ -7,15 +7,19 @@ use Lcarr\DesignPatterns\BehaviouralPatterns\Command\TurnOnTv;
 class Television
 {
     private bool $on = false;
-    private TurnOnTv $turnOnTv;
 
-    public function on(): void
+    public function turnOn(): void
     {
         $this->on = true;
     }
 
-    public function off(): void
+    public function turnOff(): void
     {
         $this->on = false;
+    }
+
+    public function isTurnedOn(): bool
+    {
+        return $this->on;
     }
 }

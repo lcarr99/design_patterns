@@ -3,18 +3,18 @@
 namespace Lcarr\DesignPatterns\UnitTests\CreationalTests;
 
 use Lcarr\DesignPatterns\CreationalPatterns\AbstractFactory\Developer;
-use Lcarr\Designpatterns\CreationalPatterns\AbstractFactory\ProjectManager;
+use Lcarr\DesignPatterns\CreationalPatterns\AbstractFactory\ProjectManager;
 use PHPUnit\Framework\TestCase;
 
 class AbstractFactoryTest extends TestCase
 {
     public function testProjectManagerIsAManager(): void
     {
-        $this->assertTrue(ProjectManager::isManager());
+        $this->assertEquals(true, ProjectManager::isManager());
     }
 
     public function testDeveloperIsNotAManager(): void
     {
-        $this->assertFalse(Developer::isManager());
+        $this->assertEquals(false, Developer::isManager());
     }
 }

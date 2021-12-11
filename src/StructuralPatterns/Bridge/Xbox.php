@@ -3,17 +3,18 @@
 namespace Lcarr\DesignPatterns\StructuralPatterns\Bridge;
 
 use Lcarr\DesignPatterns\StructuralPatterns\Bridge\Console;
+use phpDocumentor\Reflection\Types\True_;
 
 class Xbox implements Console
 {
     private bool $power = false;
     private bool $playingGame = false;
-    private bool $paused = false;
 
     public function togglePower(): void
     {
         if ($this->power) {
             $this->power = false;
+            $this->playingGame = false;
             return;
         }
 
@@ -27,8 +28,16 @@ class Xbox implements Console
 
     public function pauseGame(): void
     {
-        $this->paused = true;
-
         $this->playingGame = false;
+    }
+
+    public function powerIsOn(): bool
+    {
+        return $this->power;
+    }
+
+    public function playingGame()
+    {
+        return $this->playingGame;
     }
 }

@@ -2,27 +2,15 @@
 
 namespace Lcarr\DesignPatterns\StructuralPatterns\Composite;
 
-use Lcarr\DesignPatterns\StructuralPatterns\Composite\General;
-
-Class Commando extends General
+Class Commando implements Soldier
 {
-    public function fireGun(): void
+    public static function getRole(): string
     {
-        parent::fireGun();
-    }
-
-    public function salute(): void
-    {
-        parent::salute();
+        return 'Commando';
     }
 
     public function march(): void
     {
-        parent::march();
-    }
-
-    public function takeOrder(): void
-    {
-        echo 'Done Sir';
+        echo 'Yes Sir';
     }
 }

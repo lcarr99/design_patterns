@@ -2,7 +2,7 @@
 
 namespace Lcarr\Designpatterns\CreationalPatterns\AbstractFactory;
 
-use Lcarr\Designpatterns\CreationalPatterns\AbstractFactory\Employee;
+use Lcarr\DesignPatterns\CreationalPatterns\AbstractFactory\Employee;
 
 class ProjectManager implements Employee
 {

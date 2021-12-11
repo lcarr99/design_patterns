@@ -4,11 +4,10 @@ declare(strict_types=1);
 
 namespace Lcarr\DesignPatterns\StructuralPatterns\Proxy;
 
-class Card implements Payment
+class Card implements iPayment
 {
-    public function pay(int $amount): bool
+    public function pay(int $amount): void
     {
         echo 'Transaction Approved';
-        return true;
     }
 }
